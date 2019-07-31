@@ -22,7 +22,7 @@ class PushItem extends Component {
     }
 
     async getdata() {
-        let news = (await axios.get("http://localhost:3100/my/client/market-list?news_id=" + this.state.page)).data.data.list
+        let news = (await axios.get("http://47.101.143.75:3001/my/client/market-list?news_id=" + this.state.page)).data.data.list
 
 
         // 延迟加载
