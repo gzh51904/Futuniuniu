@@ -14,7 +14,7 @@ class Data extends Component {
     }
 
     async getdata() {
-        let data = (await axios.get("http://47.101.143.75:3001/api/news/news-list?page=0&page_size=10&_=" + this.state.nowtime)).data.data.news_list
+        let data = (await axios.get("http://47.101.143.75:3100/api/news/news-list?page=0&page_size=10&_=" + this.state.nowtime)).data.data.news_list
 
 
         // 延迟执行
