@@ -51,8 +51,8 @@ class Gupiao extends React.Component {
 
     }
     async ajax(time, id) {
-        const { data: { data: minutemap } } = await axios.get(`http://localhost:3100/api/trade/quote-minute-v2?security_id=${id}&_=${time}‬`);
-        const { data: { data: details } } = await axios.get(`http://localhost:3100/api/trade/quote-basic-v3?security_id=${id}&_=${time}`);
+        const { data: { data: minutemap } } = await axios.get(`http://47.101.143.75:3100/api/trade/quote-minute-v2?security_id=${id}&_=${time}‬`);
+        const { data: { data: details } } = await axios.get(`http://47.101.143.75:3100/api/trade/quote-basic-v3?security_id=${id}&_=${time}`);
         this.setState({
             minutemap: { ...minutemap },
             details: { ...details },
@@ -60,11 +60,11 @@ class Gupiao extends React.Component {
         })
     }
     formatTime(time) {
-        var days = time / 1000 / 60 / 60 / 24;
+        var days = time / 60 / 60 / 24;
         var daysRound = Math.floor(days);
-        var hours = time / 1000 / 60 / 60 - (24 * daysRound)
+        var hours = time / 60 / 60 - (24 * daysRound)
         var hoursRound = Math.floor(hours);
-        var minutes = time / 1000 / 60 - (60 * hoursRound) - (24 * 60 * daysRound)
+        var minutes = time / 60 - (60 * hoursRound) - (24 * 60 * daysRound)
         var minutesRound = Math.floor(minutes);
         return hoursRound + ":" + minutesRound;
     }

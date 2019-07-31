@@ -14,7 +14,7 @@ class NoticeBar extends React.Component {
         this.ajax();
     }
     async ajax() {
-        const { data: { data: shdata } } = await axios.get(`http://localhost:3100/api/quote/index-quote?_=${new Date().getTime()}`);
+        const { data: { data: shdata } } = await axios.get(`http://47.101.143.75:3100/api/quote/index-quote?_=${new Date().getTime()}`);
 
         this.setState({
             data: [...shdata.indexList,]
