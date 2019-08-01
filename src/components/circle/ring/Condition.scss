@@ -57,12 +57,14 @@ li{
         .sign{
             height: 6.5rem;
             display: flex;
+            margin: 0;
             li{
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
                 em{
                     display:inline-block;
                     width: 2.6rem;
@@ -74,6 +76,9 @@ li{
                 }
                 span{
                     margin-top: 0.5rem;
+                }
+                .am-whitespace.am-whitespace-md{
+                    height: 0;
                 }
             }
         }

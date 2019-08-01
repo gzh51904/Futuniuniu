@@ -75,7 +75,7 @@ class FootFtnn extends React.Component {
                 ],
                 [
                     { leftbutton: false },
-                    { headmiddle: ["牛牛圈·状态"] },
+                    { headmiddle: ["牛牛圈·动态"] },
                     {
                         rigthicon: [
                             {
