@@ -56,7 +56,7 @@ class All extends React.Component {
         clearInterval(this.state.timer)
     }
     async  ajax(id) {
-        const { data: { data: shdata } } = await axios.get(`http://localhost:3100/api/stock/stock-rank?plate_id=3000005&_=${id}`);
+        const { data: { data: shdata } } = await axios.get(`http://47.101.143.75:3100/api/stock/stock-rank?plate_id=3000005&_=${id}`);
         this.setState({
             data: [
                 ...shdata.downTopList,

@@ -14,7 +14,7 @@ class HelpDetails extends React.Component{
     async componentWillMount(){
         let id = this.props.location.search.slice(6)
         // console.log(id);
-        let {data:{topic}} = await axios.get('http://localhost:3100/myapi/faq/topic/tid/'+id+'?of_json=1&lang=null')
+        let {data:{topic}} = await axios.get('http://47.101.143.75:3100/myapi/faq/topic/tid/'+id+'?of_json=1&lang=null')
         this.setState({html:topic.content_html})
         // console.log(topic.content_html);
         

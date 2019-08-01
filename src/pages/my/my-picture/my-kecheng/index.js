@@ -9,13 +9,13 @@ class MyKecheng extends React.Component{
             id:'',
             navs:[{
                 title:'精选课程',
-                url:'http://localhost:3100/live/t/batch-get-university-columns?column_codes%5B%5D=index_2&column_codes%5B%5D=index_3&column_codes%5B%5D=index_4&column_codes%5B%5D=index_6&column_codes%5B%5D=index_8&column_codes%5B%5D=index_9'
+                url:'http://47.101.143.75:3100/live/t/batch-get-university-columns?column_codes%5B%5D=index_2&column_codes%5B%5D=index_3&column_codes%5B%5D=index_4&column_codes%5B%5D=index_6&column_codes%5B%5D=index_8&column_codes%5B%5D=index_9'
             },{
                 title:'全部课程',
-                url:'http://localhost:3100/live/t/get-university-course-collection?count=25&offset=0'
+                url:'http://47.101.143.75:3100/live/t/get-university-course-collection?count=25&offset=0'
             },{
                 title:'股票百科',
-                url:'http://localhost:3100/my/wiki/list?formpage=wikilistnew&news_id='+this.id+'&page_size=50'
+                url:'http://47.101.143.75:3100/my/wiki/list?formpage=wikilistnew&news_id='+this.id+'&page_size=50'
             },{
                 title:'我的课程',
                 url:''
@@ -28,7 +28,7 @@ class MyKecheng extends React.Component{
         this.jiazai = this.jiazai.bind(this)
     }
     componentWillMount(){
-        this.axiosget('http://localhost:3100/live//t/batch-get-university-columns?column_codes%5B%5D=index_2&column_codes%5B%5D=index_3&column_codes%5B%5D=index_4&column_codes%5B%5D=index_6&column_codes%5B%5D=index_8&column_codes%5B%5D=index_9')
+        this.axiosget('http://47.101.143.75:3100/live//t/batch-get-university-columns?column_codes%5B%5D=index_2&column_codes%5B%5D=index_3&column_codes%5B%5D=index_4&column_codes%5B%5D=index_6&column_codes%5B%5D=index_8&column_codes%5B%5D=index_9')
         this.setState({current:'精选课程',id:50})
     }
     async axiosget(url){

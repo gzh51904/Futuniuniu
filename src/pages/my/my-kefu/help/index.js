@@ -13,7 +13,7 @@ class Help extends React.Component{
         this.gotoHelp = this.gotoHelp.bind(this)
     }
     async componentWillMount(){
-        let {data:{list}} = await axios.get('http://localhost:3100/myapi/faq?of_json=1')
+        let {data:{list}} = await axios.get('http://47.101.143.75:3100/myapi/faq?of_json=1')
         // console.log(list);
         this.setState({list})
     }
